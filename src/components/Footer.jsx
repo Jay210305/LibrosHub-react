@@ -1,12 +1,14 @@
 import './Footer.css'
+import { LiaCcVisa } from "react-icons/lia";
+import { LiaCcMastercard } from "react-icons/lia";
 
 export function Footer () {
-  // const { filters } = useFilters()
 
   return (
     <footer className='footer'>
-      <h4>Prueba técnica de React ⚛️ － <span>@midudev</span></h4>
-      <h5>Shopping Cart con useContext & useReducer</h5>
+      <h5>LibroHub</h5>
+      <LiaCcVisa size={30}/>
+      <LiaCcMastercard size={30}/>
     </footer>
   )
 }
