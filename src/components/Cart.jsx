@@ -22,23 +22,22 @@ function CartItem({ thumbnail, price, title, quantity, addToCart }) {
 export function Cart() {
   const cartCheckboxId = useId()
   const { cart, clearCart, addToCart } = useCart()
-  const [isCheckout, setIsCheckout] = useState(false) // Controlar si estamos en la vista de Checkout
+  const [isCheckout, setIsCheckout] = useState(false)
 
   const total = cart.reduce((acc, product) => acc + product.price * product.quantity, 0)
 
   const handleCheckout = () => {
-    setIsCheckout(true) // Cambiar la vista a Checkout
+    setIsCheckout(true)
   }
 
   const handleCancel = () => {
-    setIsCheckout(false) // Volver a la vista del Carrito
+    setIsCheckout(false)
   }
 
   if (isCheckout) {
     return (
       <div className="checkout-container">
         <Checkout />
-        {/* Botón para cancelar y volver al carrito */}
         <button className="cancel-button" onClick={handleCancel}>
           Cancelar
         </button>
@@ -46,7 +45,6 @@ export function Cart() {
     )
   }
 
-  // Vista del Carrito
   return (
     <>
       <label className='cart-button' htmlFor={cartCheckboxId}>
@@ -55,15 +53,17 @@ export function Cart() {
       <input id={cartCheckboxId} type='checkbox' hidden />
 
       <aside className='cart'>
-        <ul className="products">
-          {cart.map(product => (
-            <CartItem
-              key={product.id}
-              addToCart={() => addToCart(product)}
-              {...product}
-            />
-          ))}
-        </ul>
+        <div className="cart-items-container">
+          <ul className="products">
+            {cart.map(product => (
+              <CartItem
+                key={product.id}
+                addToCart={() => addToCart(product)}
+                {...product}
+              />
+            ))}
+          </ul>
+        </div>
 
         <div className="cart-summary">
           <h3>Resumen ({cart.length} {cart.length === 1 ? 'item' : 'items'})</h3>
@@ -98,4 +98,4 @@ export function Cart() {
   )
 }
 
-export default Cart;
+export default Cart
