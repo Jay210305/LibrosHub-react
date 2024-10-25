@@ -1,6 +1,6 @@
 {
-  "products":[
-   {
+  "products": [
+    {
       "id": 1,
       "title": "Cien años de soledad",
       "author": "Gabriel García Márquez",
@@ -49,9 +49,59 @@
       "description": "Una guía espiritual que enseña a vivir en el presente y a liberarse de los pensamientos negativos que impiden la paz interior.",
       "rating": 4.6,
       "image": "https://example.com/el_poder_del_ahora.jpg"
-    }    
+    },
+    {
+      "id": 6,
+      "title": "La sombra del viento",
+      "author": "Carlos Ruiz Zafón",
+      "category": "Novela",
+      "price": 14.50,
+      "description": "Una historia sobre libros malditos y amores prohibidos ambientada en una Barcelona gótica y misteriosa.",
+      "rating": 4.9,
+      "image": "https://example.com/la_sombra_del_viento.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Matar a un ruiseñor",
+      "author": "Harper Lee",
+      "category": "Novela",
+      "price": 10.99,
+      "description": "Un clásico de la literatura estadounidense que explora el racismo y la injusticia a través de los ojos de una niña.",
+      "rating": 4.8,
+      "image": "https://example.com/matar_a_un_ruisenor.jpg"
+    },
+    {
+      "id": 8,
+      "title": "El Alquimista",
+      "author": "Paulo Coelho",
+      "category": "Filosofía",
+      "price": 13.99,
+      "description": "Una novela que sigue el viaje de un joven pastor en busca de su leyenda personal, lleno de enseñanzas filosóficas.",
+      "rating": 4.7,
+      "image": "https://example.com/el_alquimista.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Breves respuestas a las grandes preguntas",
+      "author": "Stephen Hawking",
+      "category": "Ciencia",
+      "price": 16.99,
+      "description": "Una obra que presenta las reflexiones del brillante físico sobre los grandes misterios del universo.",
+      "rating": 4.9,
+      "image": "https://example.com/breves_respuestas.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Los miserables",
+      "author": "Victor Hugo",
+      "category": "Novela",
+      "price": 78.50,
+      "description": "Una novela épica sobre la lucha por la redención y la justicia social en la Francia del siglo XIX.",
+      "rating": 4.9,
+      "image": "https://example.com/los_miserables.jpg"
+    }
   ],
-  "total":100,
-  "skip":0,
-  "limit":30
+  "total": 100,
+  "skip": 0,
+  "limit": 30
 }
