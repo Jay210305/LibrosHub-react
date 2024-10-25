@@ -1,6 +1,7 @@
 import { products as initialProducts } from './mocks/products.json'
 import { Products } from './components/Products.jsx'
 import { Header } from './components/Header.jsx'
+import { Carousel } from './components/Carousel.jsx'
 import { Footer } from './components/Footer.jsx'
 import { IS_DEVELOPMENT } from './config.js'
 import { useFilters } from './hooks/useFilters.js'
@@ -15,6 +16,7 @@ function App () {
   return (
     <CartProvider>
       <Header />
+      <Carousel products = {initialProducts}/>
       <Cart />
       <Products products={filteredProducts} />
       {IS_DEVELOPMENT && <Footer />}
