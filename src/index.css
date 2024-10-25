@@ -15,7 +15,11 @@
 }
 
 #root {
+<<<<<<< HEAD
   max-width: 1500px;
+=======
+  max-width: 1000px;
+>>>>>>> 6a9896e704d23864c2aeda8c072c075a7bf9bc92
   margin: 0 auto;
   padding: 2rem;
   text-align: center;

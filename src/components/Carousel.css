@@ -1,0 +1,58 @@
+/* Carousel.css */
+.carousel {
+  display: flex;
+  align-items: center; /* Alinea los items del carrusel */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  position: relative; /* Posiciona el carrusel para que los botones estén bien colocados */
+  padding: 16px;
+  overflow: hidden; /* Oculta el desbordamiento */
+}
+
+.carousel-item {
+  min-width: 300px; /* Ajusta el ancho fijo según el contenido más grande */
+  flex-shrink: 0;
+  background: #222;
+  color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  padding: 16px; /* Añadir padding para asegurar un espaciado consistente */
+  margin: 0 8px; /* Añade margen lateral a los items */
+}
+
+.carousel-img {
+  width: 100%;
+  height: auto; /* Mantiene la relación de aspecto */
+  aspect-ratio: 16 / 9; /* Mantiene la relación de aspecto */
+  object-fit: cover;
+}
+
+.carousel-details {
+  padding: 8px;
+}
+
+.carousel-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10; /* Asegura que los botones estén por encima del contenido */
+  transition: color 0.3s; /* Suaviza el cambio de color al pasar el ratón */
+}
+
+.prev {
+  left: 10px; /* Ajusta la posición izquierda del botón anterior */
+}
+
+.next {
+  right: 10px; /* Ajusta la posición derecha del botón siguiente */
+}
+
+.carousel-button:hover {
+  color: #ddd; /* Cambia el color al pasar el ratón */
+}
