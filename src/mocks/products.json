@@ -1,0 +1,57 @@
+{
+  "products":[
+   {
+      "id": 1,
+      "title": "Cien años de soledad",
+      "author": "Gabriel García Márquez",
+      "category": "Novela",
+      "price": 15.99,
+      "description": "Una obra maestra del realismo mágico que narra la historia de la familia Buendía a lo largo de varias generaciones en el pueblo ficticio de Macondo.",
+      "rating": 4.9,
+      "image": "https://example.com/cien_anos_de_soledad.jpg"
+    },
+    {
+      "id": 2,
+      "title": "1984",
+      "author": "George Orwell",
+      "category": "Distopía",
+      "price": 12.50,
+      "description": "Un escalofriante relato sobre un futuro totalitario donde el Gran Hermano controla todos los aspectos de la vida, y la verdad es manipulada por el gobierno.",
+      "rating": 4.8,
+      "image": "https://example.com/1984.jpg"
+    },
+    {
+      "id": 3,
+      "title": "El nombre del viento",
+      "author": "Patrick Rothfuss",
+      "category": "Fantasía",
+      "price": 17.99,
+      "description": "La primera entrega de las memorias de Kvothe, un joven con un talento extraordinario que se convierte en leyenda a través de sus aventuras y tragedias.",
+      "rating": 4.7,
+      "image": "https://example.com/el_nombre_del_viento.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Sapiens: De animales a dioses",
+      "author": "Yuval Noah Harari",
+      "category": "Historia",
+      "price": 18.99,
+      "description": "Una fascinante exploración de la historia de la humanidad, desde la Edad de Piedra hasta la era moderna, analizando cómo nuestra especie ha dominado el mundo.",
+      "rating": 4.8,
+      "image": "https://example.com/sapiens.jpg"
+    },
+    {
+      "id": 5,
+      "title": "El poder del ahora",
+      "author": "Eckhart Tolle",
+      "category": "Autoayuda",
+      "price": 11.99,
+      "description": "Una guía espiritual que enseña a vivir en el presente y a liberarse de los pensamientos negativos que impiden la paz interior.",
+      "rating": 4.6,
+      "image": "https://example.com/el_poder_del_ahora.jpg"
+    }    
+  ],
+  "total":100,
+  "skip":0,
+  "limit":30
+}
