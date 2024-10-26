@@ -23,6 +23,7 @@ export function Cart() {
   const cartCheckboxId = useId()
   const { cart, clearCart, addToCart } = useCart()
   const [isCheckout, setIsCheckout] = useState(false)
+  const [isCartVisible, setIsCartVisible] = useState(false) 
 
   const total = cart.reduce((acc, product) => acc + product.price * product.quantity, 0)
 
@@ -30,29 +31,25 @@ export function Cart() {
     setIsCheckout(true)
   }
 
-  const handleCancel = () => {
-    setIsCheckout(false)
+  const toggleCartVisibility = () => {
+    setIsCartVisible(!isCartVisible)
   }
 
   if (isCheckout) {
     return (
       <div className="checkout-container">
-        <Checkout />
-        <button className="cancel-button" onClick={handleCancel}>
-          Cancelar
-        </button>
+        <Checkout setIsCheckout={setIsCheckout} /> 
       </div>
     )
   }
 
   return (
     <>
-      <label className='cart-button' htmlFor={cartCheckboxId}>
+      <label className='cart-button' onClick={toggleCartVisibility}>
         <CartIcon />
       </label>
-      <input id={cartCheckboxId} type='checkbox' hidden />
 
-      <aside className='cart'>
+      <aside className={`cart ${isCartVisible ? 'visible' : 'hidden'}`}>
         <div className="cart-items-container">
           <ul className="products">
             {cart.map(product => (
@@ -65,34 +62,36 @@ export function Cart() {
           </ul>
         </div>
 
-        <div className="cart-summary">
-          <h3>Resumen ({cart.length} {cart.length === 1 ? 'item' : 'items'})</h3>
-          <div className="summary-item">
-            <span>Subtotal</span>
-            <span>${total.toFixed(2)}</span>
-          </div>
-          <div className="summary-item">
-            <span>Envío</span>
-            <span>-</span>
-          </div>
-          <div className="summary-item">
-            <span>Imp. Ext</span>
-            <span>-</span>
-          </div>
-          <div className="total-section">
-            <span>Total</span>
-            <span>${total.toFixed(2)}</span>
-          </div>
+        {cart.length > 0 && (
+          <div className="cart-summary">
+            <h3>Resumen ({cart.length} {cart.length === 1 ? 'item' : 'items'})</h3>
+            <div className="summary-item">
+              <span>Subtotal</span>
+              <span>${total.toFixed(2)}</span>
+            </div>
+            <div className="summary-item">
+              <span>Envío</span>
+              <span>-</span>
+            </div>
+            <div className="summary-item">
+              <span>Imp. Ext</span>
+              <span>-</span>
+            </div>
+            <div className="total-section">
+              <span>Total</span>
+              <span>${total.toFixed(2)}</span>
+            </div>
 
-          <div className="cart-actions">
-            <button onClick={clearCart}>
-              <ClearCartIcon />
-            </button>
-            <button onClick={handleCheckout} className="checkout-button">
-              Ir al Checkout
-            </button>
+            <div className="cart-actions">
+              <button onClick={clearCart}>
+                <ClearCartIcon />
+              </button>
+              <button onClick={handleCheckout} className="checkout-button">
+                Ir al Checkout
+              </button>
+            </div>
           </div>
-        </div>
+        )}
       </aside>
     </>
   )
